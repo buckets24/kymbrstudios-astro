@@ -1,10 +1,5 @@
 <script >
     let urlHash = ""
-
-    function handleOnClick(hash) {
-      console.log(hash)
-      return urlHash = hash
-    }
 </script>
 
 <div>

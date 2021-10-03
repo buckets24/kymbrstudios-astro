@@ -1,5 +1,10 @@
-<script>
+<script >
+    let urlHash = ""
 
+    function handleOnClick(hash) {
+      console.log(hash)
+      return urlHash = hash
+    }
 </script>
 
 <div>
@@ -7,18 +12,20 @@
     <div class="main_nav__container">
       <a
         href="/"
+        on:click={() => urlHash = ""}
       >
         <img class="main_nav__logo" src="/assets/kymbrstudios.png" alt="kymbrstudios" />
       </a>
       <div class="main_nav__nav_list">
-        <div class="main_nav__nav_list__item">
-          <a class="main_nav__nav_item" href="#about">About</a>
+          <div>{urlHash}</div>
+        <div class="main_nav__nav_list__item" on:click={() => urlHash = "#about"}>
+          <a onClick={() => alert('Hello, Astro!')} class={urlHash === "#about" ? "main_nav__nav_item__active" : "main_nav__nav_item"} href="#about">About</a>
         </div>
-        <div class="main_nav__nav_list__item">
-          <a class="main_nav__nav_item" href="#services">Services</a>
+        <div class="main_nav__nav_list__item" on:click={() => urlHash = "#services"}>
+          <a class={urlHash === "#services" ? "main_nav__nav_item__active" : "main_nav__nav_item"} href="#services">Services</a>
         </div>
-        <div class="main_nav__nav_list__item">
-          <a class="main_nav__nav_item" href="#contact">Contact</a>
+        <div class="main_nav__nav_list__item" on:click={() => urlHash = "#contact"}>
+          <a class={urlHash === "#contact" ? "main_nav__nav_item__active" : "main_nav__nav_item"} href="#contact">Contact</a>
         </div>
       </div>
     </div>
@@ -50,7 +57,16 @@
   font-weight: 700;
   color: #FFFFFF;
   padding: 10px;
-  display: none;
+  /* display: none; */
+  text-decoration: none;
+}
+
+.main_nav__nav_item__active {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #D64343;
+  padding: 10px;
+  /* display: none; */
   text-decoration: none;
 }
 

@@ -7,6 +7,7 @@ import Contact from "../components/Contact/index.svelte"
 import Footer from "../components/Footer/index.svelte"
 
 let title = 'KymbrStudios';
+
 ---
 <html lang="en">
 <head>
@@ -17,7 +18,7 @@ let title = 'KymbrStudios';
   <link rel="stylesheet" href="/style/global.css">
 </head>
 <body>
-  <Header />
+  <Header client:load />
   <Hero />
   <About />
   <Services />

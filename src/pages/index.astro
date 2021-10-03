@@ -1,0 +1,27 @@
+---
+import Header from "../components/Header/index.svelte"
+import Hero from "../components/Hero/index.svelte"
+import About from "../components/About/index.svelte"
+import Services from "../components/Services/index.svelte"
+import Contact from "../components/Contact/index.svelte"
+import Footer from "../components/Footer/index.svelte"
+
+let title = 'KymbrStudios';
+---
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>{title}</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="/style/global.css">
+</head>
+<body>
+  <Header />
+  <Hero />
+  <About />
+  <Services />
+  <Contact />
+  <Footer />
+</body>
+</html>

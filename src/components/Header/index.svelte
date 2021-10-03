@@ -8,7 +8,7 @@
       <a
         href="/"
       >
-        <img class="main_nav__logo" src="./assets/kymbrstudios.png" alt="kymbrstudios" />
+        <img class="main_nav__logo" src="/assets/kymbrstudios.png" alt="kymbrstudios" />
       </a>
       <div class="main_nav__nav_list">
         <div class="main_nav__nav_list__item">
